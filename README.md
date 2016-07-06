@@ -1,5 +1,7 @@
 # poker-game
-Poker Game Five Cards
+Five Cards Poker Game
 
-**master** : written by JavaScript 
+### Branches Info:
+**master** : written by JavaScript
+----
 **c sharp** : written by C#
