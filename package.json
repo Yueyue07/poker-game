@@ -1,0 +1,19 @@
+{
+  "name": "poker-game",
+  "version": "1.0.0",
+  "description": "5 cards porker game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yueyue07/poker-game.git"
+  },
+  "author": "Yueyue Qin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yueyue07/poker-game/issues"
+  },
+  "homepage": "https://github.com/Yueyue07/poker-game#readme"
+}
