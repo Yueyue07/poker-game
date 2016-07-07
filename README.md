@@ -16,10 +16,10 @@ Five Cards Poker Game
 2. If there is node installed, run:
       
       ```
-      node index.js 'heart:A heart:K heart:Q heart:J heart:10' 'heart:K heart:Q heart:J heart:10 heart:9'
+      node index.js 'H:A H:K H:Q H:J H:10' 'H:A H:K H:Q H:J H:10'
       
-          first player card set is 'heart:A heart:K heart:Q heart:J heart:10'
-          second player card set is 'heart:K heart:Q heart:J heart:10 heart:9'
+          first player card set is 'H:A H:K H:Q H:J H:10'
+          second player card set is 'H:K H:Q H:J H:10 H:9'
       ```
 
 
