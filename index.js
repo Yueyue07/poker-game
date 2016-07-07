@@ -99,6 +99,8 @@ function GetHandType(object, array) {
     // change array string to array with number
     var dictrionaryOfCardNum = {};
 
+    console.log(arrayNumsOfCards);
+
     arrayNumsOfCards.forEach(function(num) {
       var key = num.toString();
       if (dictrionaryOfCardNum[key] === undefined) {
@@ -107,6 +109,59 @@ function GetHandType(object, array) {
         dictrionaryOfCardNum[key] += 1;
       }
     });
-    console.log(Object.keys(dictrionaryOfCardNum));
+    var Length = Object.keys(dictrionaryOfCardNum).length;
+    if (Length === 2) {
+
+      for (var key in dictrionaryOfCardNum) {
+        // Four of A Kind
+        if (dictrionaryOfCardNum[key] === 4 || dictrionaryOfCardNum[key] === 1) {
+          console.log(dictrionaryOfCardNum);
+          return 'FourOfAKind';
+        }
+        // Full House
+        if (dictrionaryOfCardNum[key] === 3 || dictrionaryOfCardNum[key] === 2) {
+          console.log(dictrionaryOfCardNum);
+          return 'FullHouse';
+        }
+      }
+
+    }
+
+    if (Length === 3) {
+
+      for (var key in dictrionaryOfCardNum) {
+        // Tree Of A Kind
+        if (dictrionaryOfCardNum[key] === 3) {
+          console.log(dictrionaryOfCardNum);
+          return 'ThreOfAKind';
+        }
+        // Two Pairs
+        if (dictrionaryOfCardNum[key] === 2) {
+          console.log(dictrionaryOfCardNum);
+          return 'TwoPairs';
+        }
+      }
+    }
+
+    if (Length === 4) {
+      // One Pair
+      return 'OnePair';
+    }
+
+    if (Length === 5) {
+      //Straight || High Card
+      var array = [];
+      for (var key in dictrionaryOfCardNum) {
+        array.push(parseInt(dictrionaryOfCardNum[key]));
+      }
+
+      array.sort();
+      for (var i = 0; i < array.length - 1; i++) {
+        if (array[i + 1] - array [i] !== 1) {
+          return 'HighCard'
+        }
+      }
+      return 'Straight';
+    }
   }
 };
